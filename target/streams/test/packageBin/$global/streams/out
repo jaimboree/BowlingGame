@@ -1,0 +1,7 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Users\jaimie\workspace-scala\bowling\target\scala-2.12\bowlinggame_2.12-0.1-tests.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	bowling[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\jaimie\workspace-scala\bowling\target\scala-2.12\test-classes\bowling[0m
+[0m[[0m[0mdebug[0m] [0m[0m	bowling\BowlingGameSuite.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\jaimie\workspace-scala\bowling\target\scala-2.12\test-classes\bowling\BowlingGameSuite.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

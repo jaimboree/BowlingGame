@@ -1,0 +1,39 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mBowlingGameSuite:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- No Bonus Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given NB1 Game with no bonus points and rolls 1, 2, 3, 4, 5, 0, 6, 1, 7, 2, 8, 1, 9, 0, 1, 3, 1, 2, 6, 3 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then NB1 Score Should = 65 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given NB2 Game with same frame score but every other roll swapped  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then NB2 Score Should Also = 65 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given NB3 Game with all gutter balls [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then NB3 Score Should Be 0 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Strike Bonus Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SB1 Game with strike bonus and rolls 10, 5, 3, 7, 1, 10, 2, 4, 10, 10, 8, 1, 3, 3, 4, 2 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SB1 Score Should = 124 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SB2 Game with strike bonus in last frame and rolls  10, 5, 3, 7, 1, 10, 2, 4, 10, 10, 8, 1, 3, 3, 10, 10, 4 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SB2 Score Should = 142 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SB3 Game with all strike rolls [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SB3 Perfect Game Should = 300 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Spare Bonus Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SPB1 Game with spare bonus in last frame and rolls 4, 4, 6, 3, 5, 5, 2, 8, 3, 2, 8, 2, 2, 4, 9, 0, 5, 0, 6, 4, 3 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SPB1 Score Should = 92 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SPB2 Game with spare bonus and rolls 4, 4, 6, 3, 5, 5, 2, 8, 3, 2, 8, 2, 2, 4, 9, 0, 5, 0, 6, 3 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SPB2 Score Should = 88 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given SPB3 Game with all spares and all rolls of 5 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then SPB3 Score Should = 150 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Normal Game Test including 10th Frame Bonus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given NB1 Game with rolls 4, 4, 6, 4, 10, 5, 5, 10, 10, 3, 2, 8, 2, 2, 4, 10, 0, 1 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then NG1: Score Should = 140 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given NB2 Game with rolls 4, 4, 6, 4, 10, 5, 5, 10, 10, 3, 2, 8, 2, 2, 4, 9, 1, 10 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then NG2: Score Should = 149 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Invalid Pins Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given IP1: Game with rolls of negative numbers [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then IP1 Game throws IllegalArgumentException Invalid Roll [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given IP2: Game with rolls greater than 10  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then IP2 Game throws IllegalArgumentException Invalid Roll [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given IP3: Game where frame total exceeds frame pins [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then IP3: throws IllegealArgumentException Invalid Score for Frame [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Invalid Frames Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given IF1: Game with rolls for incompleted game [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then IF1: Game throws IllegalArgumentException Not enough frames to score game [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Given IF2: Game with extra rolls [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  + Then IF2: Game ignores additional rolls and score should = 150 [0m[0m
