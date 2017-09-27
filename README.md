@@ -38,6 +38,7 @@ http://www.scala-sbt.org/download.html
 The build command will create an executable JAR file that will be found in "application/target/scala-2.12". Name and version can be modified in build.sbt. The project contains a plugin to sbt-assembly to create jar file with dependencies.
 
 To clear existing jar then build with dependencies run the commands: 
+
 	sbt>clean
 	sbt>assembly
 
